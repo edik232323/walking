@@ -62,12 +62,15 @@ public class Edify {
     }
 
     // показать
-   public static void displaySongs() {
-        for (int i = 0; i < songCount; i++) {
-            System.out.println("\n title: " + titles[i] + "\n author: " + authors[i] + "\n price: " + prices[i] + "\n views: " + stocks[i]);
-
+    public static void displaySongs() {
+        if (songCount != 0) {
+            for (int i = 0; i < songCount; i++) {
+            System.out.println("\n title: " + titles[i] + "\n author: " + authors[i] + "\n price: " + prices[i] + "\n views: " + stocks[i]);};
         }
-   }
+        else {
+            System.out.println("\n no songs to display");
+        }
+    }
     // поиск
     public static void searchSongs(Scanner scanner) {
         System.out.print("Enter title to search: ");
